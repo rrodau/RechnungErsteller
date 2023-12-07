@@ -138,7 +138,7 @@ function addNewRow() {
         return;
     }
 
-    amount = amount.toLocaleString('de-DE', { minimumFractionDigits: 2 }) + '€';
+    amount = amount.toLocaleString('de-DE', { minimumFractionDigits: 2 }) + ' €';
     // calls function to add the row
     addRow(description, amount);
 
