@@ -108,7 +108,7 @@ function save(description, amount) {
      * A function which saves the new added row in
      * localStorage
      */
-    loadedData.push({"description": description, "amount": amount.toLocaleString('de-DE')});
+    loadedData.push({"description": description, "amount": amount});
     localStorage.setItem('myData', JSON.stringify(loadedData));
 }
 
@@ -137,7 +137,7 @@ function addNewRow() {
         return;
     }
 
-    amount = amount.toLocaleString('de-DE') + '€';
+    amount = amount.toLocaleString('de-DE', { minimumFractionDigits: 2 }) + '€';
     // calls function to add the row
     addRow(description, amount);
 
@@ -257,9 +257,9 @@ function erstelleRechnung(daten) {
     let gesamtNetto = calc_sum();
     let gesamtBrutto = Math.floor((gesamtNetto * 1.19)*100)/100;
     let gesamtBruttoDiff = Math.floor((gesamtBrutto - gesamtNetto)*100)/100;
-    gesamtNetto = gesamtNetto.toLocaleString('de-DE');
-    gesamtBrutto = gesamtBrutto.toLocaleString('de-DE');
-    gesamtBruttoDiff = gesamtBruttoDiff.toLocaleString('de-DE');
+    gesamtNetto = gesamtNetto.toLocaleString('de-DE', { minimumFractionDigits: 2 });
+    gesamtBrutto = gesamtBrutto.toLocaleString('de-DE',{ minimumFractionDigits: 2 });
+    gesamtBruttoDiff = gesamtBruttoDiff.toLocaleString('de-DE',{ minimumFractionDigits: 2 });
     let text = `${gesamtNetto} €`;
     let textSize = doc.getTextWidth(text);
     doc.text(`Nettobetrag:\nzzgl. 19% MwSt:`, 140, y+7);
