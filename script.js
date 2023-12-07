@@ -108,7 +108,7 @@ function save(description, amount) {
      * A function which saves the new added row in
      * localStorage
      */
-    loadedData.push({"description": description, "amount": amount.toLocaleString('de-DE')+'€'});
+    loadedData.push({"description": description, "amount": amount.toLocaleString('de-DE')});
     localStorage.setItem('myData', JSON.stringify(loadedData));
 }
 
