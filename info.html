@@ -16,6 +16,12 @@
         <label for="firmName">Firmenname: </label>
         <input type="text" id="firmName">
 
+        <label for="senderFirstName">Vorname: </label>
+        <input type="text" id="senderFirstName">
+
+        <label for="senderSurName">Name: </label>
+        <input type="text" id="senderSurName">
+
         <label for="senderAddress">Adresse: </label>
         <input type="text" id="senderAddress">
 
@@ -30,6 +36,21 @@
 
         <label for="email">E-Mail: </label>
         <input type="email" id="email">
+
+        <label for="strNr">Steuernummer: </label>
+        <input type="text" id="strNr">
+
+        <label for="mwstNr">Mwst.-Iden-Nr.: </label>
+        <input type="text" id="mwstNr">
+
+        <label for="bankName">Bank: </label>
+        <input type="text" id="bankName">
+
+        <label for="iban">IBAN: </label>
+        <input type="text" id="iban">
+
+        <label for="bic">BIC: </label>
+        <input type="text" id="bic">
     
     </div>
 
@@ -45,14 +66,15 @@
         <input type="text" id="recieverAddress">
     </div>
     </div>
-
-    <div>
-        <button class="submit" onclick="saveDetails()">Speichern</button>
-    </div>
-    <div>
-        <a href="./index.html">
-            <button>Zurück</button>
-        </a>
+    <div class="center">
+        <div class="button-div">
+            <button class="button" class="submit" onclick="saveDetails()">Speichern</button>
+        </div>
+        <div class="button-div">
+            <a href="./index.html">
+                <button class="button">Zurück</button>
+            </a>
+        </div>
     </div>
 </body>
 </html>

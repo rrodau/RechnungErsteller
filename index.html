@@ -17,6 +17,7 @@
       <h1 id="title">Rechnungersteller</h1>
       <table id="table">
           <tr>
+              <th>Pos</th>
               <th>Beschreibung</th>
               <th>Betrag</th>
               <th class="no-border"></th>
@@ -32,8 +33,15 @@
       <button onclick="addNewRow()">Hinzufügen</button>
     </div>
 
+    <div class="inputs flex">
+      <input id="invoiceNr" type="number" placeholder="Rechnungsummer">
+      <input class="date" type="text" id="startDate" placeholder="Von" pattern="\d{2}-\d{2}-\d{4}">
+      <span>-</span>
+      <input class="date" type="text" id="endDate" placeholder="Bis" pattern="\d{2}-\d{2}-\d{4}">
+      <input class="date" type="text" id="createDate" placeholder="Erstellt am" pattern="\d{2}-\d{2}-\d{4}">
+    </div>
+
     <div class="center">
-  
       <div class="button-div">
         <button class="button" id="downloadButton" onclick="download()" disabled>Download</button>
       </div>
@@ -42,6 +50,15 @@
         <button class="button" id="deleteAllButton" toggle="modal" data-targe="#myModal"> Alles Löschen</button>
       </div>
     </div>
+
+
+   <!-- <footer>
+      <div class="inputs">
+        <textarea class="custom-textarea" id="description" oninput="anpassenFeld()" placeholder="Beschreibung"></textarea>
+        <input type="number" id="amount" placeholder="Betrag">
+        <button onclick="addNewRow()">Hinzufügen</button>
+      </div>
+    </footer> -->
 
     <!-- Modal-Container -->
     <div id="meinModal" class="modal">
