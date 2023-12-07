@@ -27,7 +27,7 @@ function loadData() {
         cell1.innerHTML = i+1
         cell2.innerHTML = loadedData[i]["description"];
         cell3.innerHTML = loadedData[i]["amount"];
-        deleteCell.innerHTML = '<button class="deleteButton" onclick="deleteRow(this)">X</button>';
+        deleteCell.innerHTML = '<button class="deleteButton no-border" onclick="deleteRow(this)">X</button>';
         deleteCell.className = 'no-border';
     }
 }
@@ -90,6 +90,7 @@ function addRow(description, amount) {
     cell2.innerHTML = description;
     cell3.innerHTML = amount;
     deleteCell.innerHTML = '<button class="deleteButton no-border" onclick="deleteRow(this)">X</button>';
+    deleteCell.className = 'no-border';
     cell2.style = "max"
 }
 
