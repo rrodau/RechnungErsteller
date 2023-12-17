@@ -185,7 +185,7 @@ function erstelleRechnung(daten) {
     doc.text(`${infoData['recieverName']}\n${infoData['recieverAddress']}\n${infoData['recieverCity']}`, 15, 55);
 
     // Oben Rechts
-    doc.text(`${infoData['firmName']}\n${infoData['senderAddress']}\n${infoData['senderPlz']} ${infoData['senderCity']}\n\nTelefon: ${infoData['phone']}\n\nE-Mail: ${infoData['email']}`, 195, 30, "right");
+    doc.text(`${infoData['firmName']}\n${infoData['senderAddress']}\n${infoData['senderPlz']} ${infoData['senderCity']}\n\nTelefon: ${infoData['phone']}`, 195, 30, "right");
 
     // Rechnung übber Tabelle
     doc.setFont(undefined, 'bold');
@@ -310,9 +310,13 @@ function erstelleRechnung(daten) {
         // Wandelt die Zeichenkette in eine Zahl um
         return parseFloat(normalizedNumberString);
     }
-    // TODO: Change name of pdf file
+    const date = new Date();
+
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
     //save pdf
-    doc.save('Rechnung.pdf');
+    doc.save(`Rechnung_${day}_${month}_${year}.pdf`);
 }
 
 function download() {
