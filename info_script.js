@@ -1,7 +1,7 @@
 var loadedInfoData = JSON.parse(localStorage.getItem('infoData')) || [];
 
 document.addEventListener('DOMContentLoaded', function() {
-    localStorage.removeItem('infoData');
+    //localStorage.removeItem('infoData');
 
     loadInfoData();
 }, false);
@@ -54,13 +54,14 @@ function loadInfoData() {
 
 function saveDetails() {
     var firmName = document.getElementById('firmName').value;
-    var senderFirstName = document.getElementById('senderFirstName');
-    var senderSurName = document.getElementById('senderSurName');
+    var senderFirstName = document.getElementById('senderFirstName').value;
+    var senderSurName = document.getElementById('senderSurName').value;
     var senderAddress = document.getElementById('senderAddress').value;
     var senderPlz = document.getElementById('senderPlz').value;
     var senderCity = document.getElementById('senderCity').value;
     var phone = document.getElementById('phone').value;
     var email = document.getElementById('email').value;
+    var strNr = document.getElementById('strNr').value;
     var mwstNr = document.getElementById('mwstNr').value;
     var bankName = document.getElementById('bankName').value;
     var iban = document.getElementById('iban').value;
