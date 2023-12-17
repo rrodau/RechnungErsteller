@@ -18,7 +18,6 @@ function loadInfoData() {
     var senderPlz = document.getElementById('senderPlz');
     var senderCity = document.getElementById('senderCity');
     var phone = document.getElementById('phone');
-    var email = document.getElementById('email');
     var strNr = document.getElementById('strNr');
     var mwstNr = document.getElementById('mwstNr');
     var bankName = document.getElementById('bankName');
@@ -39,7 +38,6 @@ function loadInfoData() {
     senderPlz.value = infoData['senderPlz'];
     senderCity.value = infoData['senderCity'];
     phone.value = infoData['phone'];
-    email.value = infoData['email'];
     strNr.value = infoData['strNr'];
     mwstNr.value = infoData['mwstNr'];
     bankName.value = infoData['bankName'];
@@ -60,7 +58,6 @@ function saveDetails() {
     var senderPlz = document.getElementById('senderPlz').value;
     var senderCity = document.getElementById('senderCity').value;
     var phone = document.getElementById('phone').value;
-    var email = document.getElementById('email').value;
     var strNr = document.getElementById('strNr').value;
     var mwstNr = document.getElementById('mwstNr').value;
     var bankName = document.getElementById('bankName').value;
@@ -80,7 +77,6 @@ function saveDetails() {
         "senderPlz": senderPlz,
         "senderCity": senderCity,
         "phone": phone,
-        "email": email,
         "strNr": strNr,
         "mwstNr": mwstNr,
         "bankName": bankName,
@@ -95,4 +91,5 @@ function saveDetails() {
     loadedInfoData = [obj];
 
     localStorage.setItem('infoData', JSON.stringify(loadedInfoData));
+    window.alert('Erfolgreich gespeichert');
 }

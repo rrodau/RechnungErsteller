@@ -184,8 +184,11 @@ function erstelleRechnung(daten) {
     // Kundeninformationen
     doc.text(`${infoData['recieverName']}\n${infoData['recieverAddress']}\n${infoData['recieverCity']}`, 15, 55);
 
-    // Oben Rechts
-    doc.text(`${infoData['firmName']}\n${infoData['senderAddress']}\n${infoData['senderPlz']} ${infoData['senderCity']}\n\nTelefon: ${infoData['phone']}`, 195, 30, "right");
+    // Oben Rechts some is hardcoded
+    doc.text(`${infoData['firmName']}\n${infoData['senderFirstName']} ${infoData['senderSurName']}\n
+    ${infoData['senderAddress']}\n${infoData['senderPlz']} ${infoData['senderCity']}
+    \n\nMega Möbel Spedition
+    \n\nTelefon: ${infoData['phone']}`, 195, 30, "right");
 
     // Rechnung übber Tabelle
     doc.setFont(undefined, 'bold');
